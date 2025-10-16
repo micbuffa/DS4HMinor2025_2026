@@ -62,6 +62,8 @@ function animationLoop() {
 }
 
 function drawEverything() {
+    ctx.save(); // save the current state
+
     // draw a simple rectangle
     // parameters: x, y, width, height
     ctx.fillStyle = "red"; // red color
@@ -74,4 +76,6 @@ function drawEverything() {
     ctx.strokeStyle = "green"; // green color
     ctx.lineWidth = 5; // 5 pixels width
     ctx.strokeRect(100, 350, 150, 75);
+
+    ctx.restore();
 }
